@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    # Expose the Flask development server on the host so that it can be
+    # accessed at http://localhost:5000 when the container is running.
+    ports:
+      - "5000:5000"
+    # Mount the source code into the container to allow live editing
+    # during development.  The uploads directory is also mounted so
+    # uploaded files persist across container restarts.
+    volumes:
+      - ./:/app
+      - ./uploads:/app/uploads

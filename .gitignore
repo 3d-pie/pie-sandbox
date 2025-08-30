@@ -1,0 +1,60 @@
+########################################
+#  Python / Flask
+########################################
+# Byte-compiled / optimized / C-extensions
+__pycache__/
+*.py[cod]
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+
+# Flask runtime files
+instance/
+uploads/
+*.log
+*.pid
+*.sqlite3
+*.db
+*.db-journal
+*.pyo
+*.pyd
+
+# Environment / config files
+.env
+.flaskenv
+
+########################################
+#  Testing & coverage
+########################################
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+
+########################################
+#  IDE / Editor specific
+########################################
+# VS Code
+.vscode/
+
+# PyCharm / IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+
+########################################
+#  OS files
+########################################
+.DS_Store
+Thumbs.db
