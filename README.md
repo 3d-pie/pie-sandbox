@@ -6,12 +6,13 @@
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/your-org/your-sandbox.git
+git clone https://github.com/3d-pie/pie-sandbox.git
 cd your-sandbox/sandbox
 
 # 2. Create & activate a fresh virtual environment (Python 3.12)
 python3 -m venv .venv
-source .venv/bin/activate         # Windows: .venv\Scripts\activate
+source .venv/bin/activate # Linux    
+# .venv\Scripts\activate # Windows 
 
 # 3. Install Python dependencies
 pip install --upgrade pip
@@ -21,16 +22,9 @@ pip install -r requirements.txt
 python -m app                     # http://localhost:5000
 ```
 
-Tip: The first boot auto-creates `sandbox.db` and the uploads/
+Tip: The first boot auto-creates `instance/sandbox.db` and the uploads/
 directory (if missing). No additional setup required.
 
-#### Smoke Test
-
-```bash
-# In a separate terminal (still inside the sandbox folder)
-./selfcheck.sh
-# → should print three “OK” lines and a green badge
-```
 
 Follow the instructions in the challenge description to extend this scaffold.
 
@@ -38,7 +32,7 @@ Follow the instructions in the challenge description to extend this scaffold.
 ## 2 · Running with Docker (optional)
 
 Docker keeps your local environment clean and guarantees “it-works-on-my-machine” parity. 
-(Get Started with Docker)[https://www.docker.com/get-started/]
+[Get Started with Docker](https://www.docker.com/get-started/)
 
 ### 2.1 Build & Run
 
@@ -72,7 +66,7 @@ sandbox/
 │  ├─ models.py           # SQLAlchemy models (User, Item)
 │  ├─ routes.py           # HTTP routes and view functions
 │  ├─ services.py         # Stubs for parsing and rendering
-│  └─ templates/          # Jinja2 templates
+│  └─ templates/          # Jinja2 HTML templates
 │      ├─ base.html
 │      ├─ login.html
 │      ├─ rbac_demo.html
@@ -83,7 +77,6 @@ sandbox/
 │  ├─ env.py
 │  └─ versions/
 │      └─ 0001_initial.py
-├─ selfcheck.sh           # Script to verify the scaffold boots and basic routes work
 ├─ Dockerfile             # Build instructions for containerising the app
 ├─ docker-compose.yml     # Compose file to run the container with mounted volumes
 ├─ requirements.txt       # Python dependencies
