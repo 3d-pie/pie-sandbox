@@ -45,12 +45,13 @@ This file describes what you need to **implement** inside the sandbox repository
 4. **Role variety** – Create at least two roles with distinct permission sets (e.g., `operator`, `manager`).
 
 
-Tip: Inspect the SQLite database quickly with [DB Browser for SQLite](https://sqlitebrowser.org/).
+**Tip: Inspect the SQLite database quickly with [DB Browser for SQLite](https://sqlitebrowser.org/).**
 
 **SR**
 
 - The scaffold already contains a `/login` page powered by Flask‑Login.
 - Highest role (`superadmin`) can edit other users’ roles via `/admin/roles` stub UI.
+
 
 **Done when**
 
@@ -122,13 +123,13 @@ Tip: Inspect the SQLite database quickly with [DB Browser for SQLite](https://
 
 ---
 
-### ## Git basics & submission
+## Git basics & submission
 
 You’ll be working in a public GitHub repo that already contains the sandbox scaffold. **One branch for all Phase‑1 work is perfectly fine**—feel free to split things up if you prefer, but it’s not required.
 
 ```bash
 # 1. Fork (or clone if you already have rights) and get the code
-$ git clone https://github.com/<your‑username>/3d‑pie‑sandbox.git
+$ git clone https://github.com/3d-pie/pie-sandbox.git
 $ cd 3d‑pie‑sandbox
 
 # 2. Create (or check out) a single working branch
@@ -136,7 +137,6 @@ $ git checkout -b phase1
 
 # 3. Build, code, commit – early and often
 $ docker compose up  # make sure it boots
-$ ./selfcheck.sh     # green? great, start hacking
 $ git add app/models.py migrations/0001_rbac.py
 $ git commit -m "feat: rbac migration skeleton"
 
@@ -144,12 +144,11 @@ $ git commit -m "feat: rbac migration skeleton"
 $ git push -u origin phase1
 ```
 
-Keep pushing commits as you iterate—GitHub will update the PR automatically. When:
+Keep pushing commits as you iterate When:
 
-1.  `docker compose up` starts without errors, **and**
-2.  `./selfcheck.sh` prints all “OK” messages and exits zero,
+1.  `docker compose up` starts without errors
 
 …request a review. We’ll merge once everything looks solid. That unlocks access to the main repo for Phase 2.
 
-> **Open brief on purpose:** The instructions stay deliberately broad so you can explore Flask, SQLAlchemy, and clean architecture in your own style. Rename modules, add linters, tests—just keep `docker compose up` and `./selfcheck.sh` green.
+> **Open brief on purpose:** The instructions stay deliberately broad so you can explore Flask, SQLAlchemy, and clean architecture in your own style. Rename modules, add linters, tests—just keep `docker compose up` green.
 

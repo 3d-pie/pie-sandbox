@@ -1,8 +1,6 @@
 """Placeholder service functions.
 
-These functions are intentionally left unimplemented.  Human developers
-will later replace them with real implementations for parsing G‑Code
-files and rendering thumbnails.
+These functions are intentionally left unimplemented.
 """
 
 
@@ -14,9 +12,8 @@ def gcode_parser(path: str) -> dict:
 
     Returns:
         A dictionary containing statistics extracted from the file.
-        This stub always returns a not‑implemented message.
     """
-    # Stub. Human will parse .gcode.
+    # Stub. parse .gcode.
     return {"msg": "parser not implemented"}
 
 
@@ -31,5 +28,5 @@ def thumbnail_render(path: str) -> str | None:
         directory, or ``None`` if rendering is not implemented.  This
         stub always returns ``None``.
     """
-    # Stub. Human will render PNG and return relative path.
+    # Stub. render PNG and return relative path.
     return None

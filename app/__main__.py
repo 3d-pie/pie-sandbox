@@ -17,7 +17,7 @@ def main() -> None:
     # start the built‑in development server.  In a production setting
     # this file would not be used; instead, a WSGI server such as
     # Gunicorn would load the ``app`` object directly.
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5000, debug=True)
 
 
 if __name__ == '__main__':

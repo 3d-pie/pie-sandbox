@@ -1,6 +1,6 @@
 # Use a slim Python base image.  Python 3.12 is required by the
 # application.  Slim reduces the image size by omitting build tools.
-FROM python:3.12-slim
+FROM python:3.11-slim
 
 # Set the working directory inside the container.  All subsequent
 # commands operate relative to this directory.
